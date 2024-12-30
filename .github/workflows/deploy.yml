@@ -30,9 +30,9 @@ jobs:
           environment-url: ${{ secrets.ENVIRONMENT_URL }}
 
       # Step 4: Export Solution
-- name: Export Solution
-  run: pac solution export --name "solution1testing" --path "./solutions/solution.zip"
+      - name: Export Solution
+        run: pac solution export --name "solution1testing" --path "./solutions/solution.zip"
 
-# Step 5: Import Solution
-- name: Import Solution
-  run: pac solution import --path "./solutions/solution.zip" --overwrite-unmanaged
+      # Step 5: Import Solution
+      - name: Import Solution
+        run: pac solution import --path "./solutions/solution.zip" --overwrite-unmanaged
