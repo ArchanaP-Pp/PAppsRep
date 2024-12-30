@@ -16,7 +16,8 @@ jobs:
 
       # Step 2: Install Power Platform CLI (pac CLI)
       - name: Install Power Platform CLI
-        uses: microsoft/powerplatform-actions/cli-install@v1  # Correct action to install CLI
+        run: |
+          curl -sSL https://aka.ms/get-powerapps-cli | bash
 
       # Step 3: Authenticate to Power Platform
       - name: Authenticate to Power Platform
