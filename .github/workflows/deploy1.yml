@@ -14,11 +14,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Power Platform CLI (pac CLI)
+      # Step 2: Install Power Platform CLI (pac CLI)
       - name: Set up Power Platform CLI
-        uses: microsoft/powerplatform-actions/setup@v1
-        with:
-          pac-version: 'latest'  # Install the latest version of Power Platform CLI
+        uses: microsoft/powerplatform-actions/cli-install@v1
 
       # Step 3: Authenticate to Power Platform
       - name: Authenticate to Power Platform
